@@ -1,0 +1,7 @@
+npm -v
+npm install // that folder download
+npm init // that packge.json file get created with descrption when we enter new data that file get updated here
+npm install chalk@4.0.0
+nodemon -v
+npm i nodemon@2.0.3 -g
+npm i validator@13.0.0
