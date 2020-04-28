@@ -15,11 +15,24 @@ const bookJson = JSON.stringify(book)
 fs.writeFileSync('1-json.json',bookJson)
 // this statement store data of bookJSON into 1-json.json file
 
+// const dataBuffered = fs.readFileSync('1-json.json')
+// console.log(dataBuffered.toString())
+// const dataJSON = dataBuffered.toString()
+// const data = JSON.parse(dataJSON)// parse data into object
+
+// console.log(data)
+
+// console.log(data.title)
+
+
+//________________________________________________
+
 const dataBuffered = fs.readFileSync('1-json.json')
-console.log(dataBuffered.toString())
 const dataJSON = dataBuffered.toString()
-const data = JSON.parse(dataJSON)// parse data into object
+const user = JSON.parse(dataJSON)
 
-console.log(data)
+user.title = 'the secret'
+user.author  = 'ronald'
 
-console.log(data.title)
+const userJSON = JSON.stringify(user)
+fs.writeFileSync('1-json.json',userJSON)
